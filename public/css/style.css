@@ -28,6 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .navbar ul {
@@ -52,7 +53,7 @@ body {
 /* Showcase */
 .showcase {
   height: 450px;
-  width: 100%;
+  width: 100vw;
   background: var(--primary-color);
 }
 
@@ -98,16 +99,36 @@ form button:hover {
   transform: scale(1.1);
 }
 
+@media only screen and (max-width: 800px) {
+  .form-control {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* Image */
 
 .image {
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 img {
+  width: 90vw;
   display: block;
   margin: auto;
+}
+
+@media only screen and (min-width: 801px) {
+  .form-control {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .msg {
